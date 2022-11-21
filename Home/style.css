@@ -1,0 +1,581 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================START NAVBAR=========================== */
+
+.header {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgb(4,9,30,0.7)),url(images/banner.png);
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+}
+
+.logo img {
+    width: 8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: blue;
+    display: block;
+    transition: all 0.3s ease;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.nav-links a:hover:after{
+    color: rgb(217, 226, 235);
+    width: 100%;
+}
+
+
+
+/* Start Text-section */
+
+.container {
+    display: flex;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: aliceblue;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.container h1 {
+    font-size: 62px;
+}
+
+.container p {
+    font-size: 14px;
+}
+
+.container .btn {
+    width: 170px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 10px;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container .btn:hover {
+    background: #f44336;
+    border: 0;
+}
+
+/* ===========================START COURSES=========================== */
+
+main .courses {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.courses .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.courses .cards .card {
+    padding: 1.5rem;
+    background: #f8dad8;
+    transition: 0.5s;
+}
+
+.courses .cards .card:hover {
+    box-shadow: 0 0 20px 0 #f1b8b5;
+}
+
+.courses .cards .card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.courses .cards .card small {
+    font-weight: 300;
+}
+
+/* ===========================START CAMPUS=========================== */
+
+.campus {
+    margin-top: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.campusPhotos {
+    width: 80%;
+    margin: auto;
+    /* margin-top: 5rem; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    overflow: hidden;
+    position: relative;
+}
+
+.campusPhotos img {
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.campusPhoto {
+    height: 100%;
+    position: relative;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    border-radius: 0.4rem;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.layer:hover{
+    background: rgba(245, 0, 0, 0.5);
+}
+
+.layer h4 {
+    width: 100%;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+.layer:hover h4{
+    bottom:49%;
+    opacity: 1;
+}
+
+/* ===========================START FACILITIES=========================== */
+
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.facilities-col {
+    text-align: left;
+    flex-basis: 31%;
+}
+
+.facilities-col img {
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col h5 {
+    margin-top: 2rem;
+}
+
+/* ===========================START REVIEWS=========================== */
+
+.reviews {
+    width: 80%;
+    margin: auto;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.reviews .row {
+    gap: 2rem;
+} 
+
+.review-col {
+    text-align: left;
+    flex-basis: 31%;
+    background: #f8dad8;
+    padding: 30px;
+    display: flex;
+    gap: 1.7rem;
+    border-radius: 0.5rem;
+}
+
+.stars {
+    color: #f61403;
+}
+
+.review-col img {
+    margin-left: 1.3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.review-text{
+    margin-left: 1.3rem;
+}
+
+.review-col:hover{
+    box-shadow: 0 0 20px 0 #f1b8b5;
+}
+
+.navBar i {
+    display: none;
+}
+/* ===========================START CONTACT US=========================== */
+
+.contact-us {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.5),rgba(25, 16, 16, 0.832)),url(./images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 82%;
+    margin: 100px auto;
+    padding: 100px 0;
+    border-radius: 10px;
+}
+
+.contact-us h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 45px;
+}
+
+.contact-us a {
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 24px;
+    transition: 0.5s;
+    background: transparent;
+    border-radius: 0;
+}
+
+.contact-us a:hover {
+    background: #f44336;
+    border: 0;
+}
+
+/* ===========================START FOOTER=========================== */
+
+footer{
+    text-align: center;
+}
+
+footer h5 {
+    font-weight: 700;
+}
+
+footer p {
+    font-weight: 300;
+}
+
+.socialMedia i {
+    margin: 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.fa-square-facebook {
+    color: blue;
+}
+
+.fa-square-twitter{
+    color: #38A4E7;
+}
+
+.fa-square-instagram{
+    background-image: white;
+    color: rgb(221, 40, 40);
+}
+.fa-linkedin {
+    color: #0077B5;
+}
+
+/* ===========================START ABOUT US=========================== */
+
+.AboutUs-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 7rem auto;
+    gap: 2rem;
+}
+
+.aboutUS-photo img{
+    width: 25rem;
+}
+
+.AboutUs-container .btn {
+    background: transparent;
+    border: 1px solid rgb(32, 132, 189);
+    border-radius: 0;
+    color: #1b8031;
+    transition: 0.8s;
+}
+
+.AboutUs-container .btn:hover {
+    background: rgb(248, 78, 78);
+    border-radius: 0;
+    color: #fff;
+}
+
+.aboutHeader {
+    min-height: 55vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgb(4,9,30,0.7)),url(images/background.jpg);
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+/* ===========================START BlLOG PAGE=========================== */
+
+.graduateContainer{
+    width: 80%;
+    margin: 7rem auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.graduateHeader p{
+    text-align: center;
+    padding: 0.5rem ;
+    color: white;
+    background: #ff2f21;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.graduatePhoto img{
+    width: 100%;
+}
+
+.graduatePhoto h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.graduatePhoto{
+    flex-basis: 65%;
+}
+
+.graduateCategorie{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.graduateText {
+    width: 32%;
+}
+
+.comment-form .btn{
+    color: rgb(216, 81, 95);
+    border: 1px solid rgb(217, 89, 89);
+    border-radius: 0;
+    transition: 0.5s;
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+.comment-form .btn:hover {
+    background: #ff564a;
+    color: white;
+}
+
+.comment-box{
+    border: 2px solid rgb(228, 217, 217);
+    padding: 1rem;
+    position: relative;
+}
+
+.comment-box h3 {
+    margin-top: 0;
+}
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment-form input , .comment-form textarea{
+    border: 0;
+    background: rgb(220, 219, 219);
+    padding: 7px;
+    outline: none;
+}
+
+.comment-form input:hover {
+    border: 0;
+}
+
+/* <!-- ===========================START CONTACT US PAGE=========================== --> */
+
+.location{
+    width: 80%;
+    margin: auto;
+    margin-top: 8rem;
+}
+
+.location iframe{
+    width: 100%;
+    margin: auto;
+}
+
+/* ===========================MEDIA QUERY FOR TABLETS=========================== */
+
+@media screen and (max-width:1020px) {
+
+    /* .nav-links {
+        display: none;
+    } */
+
+    .navBar i {
+        display: inline;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .container h1 {
+        font-size: 35px;
+    }
+
+    .container p {
+        font-size: 10px;
+    }
+
+    .courseHeader h1 {
+        font-size: 30px;
+    }
+
+    .courses .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+
+    .campusPhotos {
+        grid-template-columns: 1fr;
+    }
+
+    .facilities .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-us h2{
+        font-size: 30px;
+    }
+
+    .container .btn{
+        font-size: 10px;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #f61403;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        z-index: 2;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        transition: 0.5s;
+    }
+
+    .nav-links a{
+        margin-left: 30%;
+        transition: 0.5s;
+    }
+
+    .nav-links a:hover{
+        margin-left: 30px;
+    }
+
+    .nav-links a::after {
+        content: "";
+        width: 200;
+        height: 0px;
+        background: blue;
+        transition: all 0.3s ease;
+        margin-top: 0.5rem;
+    }
+
+    .navBar{
+        padding: 1rem 2rem;
+    }
+
+    .AboutUs-container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .graduateContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .graduatePhoto , .graduatePhoto img{
+        width: 100%;
+    } 
+
+    .graduateText{
+        width: 100%;
+    }
+
+
+}

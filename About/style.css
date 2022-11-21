@@ -1,0 +1,239 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================START NAVBAR=========================== */
+
+.header {
+    min-height: 55vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgb(4,9,30,0.7)),url(images/background.jpg);
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    position: relative;
+}
+
+.logo img {
+    width: 8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: blue;
+    display: block;
+    transition: all 0.3s ease;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.nav-links a:hover:after{
+    color: rgb(217, 226, 235);
+    width: 100%;
+}
+
+.navBar i{
+    display: none;
+}
+
+
+
+/* Start Text-section */
+
+.container {
+    display: flex;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: aliceblue;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.container h1 {
+    font-size: 62px;
+}
+
+.container p {
+    font-size: 14px;
+}
+
+.container .btn {
+    width: 170px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 10px;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container .btn:hover {
+    background: #f44336;
+    border: 0;
+}
+
+
+/* ===========================START ABOUT US=========================== */
+
+.AboutUs-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 7rem auto;
+    gap: 2rem;
+}
+
+.aboutUS-photo img{
+    width: 25rem;
+}
+
+.AboutUs-container .btn {
+    background: transparent;
+    border: 1px solid rgb(32, 132, 189);
+    border-radius: 0;
+    color: #1b8031;
+    transition: 0.8s;
+}
+
+.AboutUs-container .btn:hover {
+    background: rgb(248, 78, 78);
+    border-radius: 0;
+    color: #fff;
+}
+
+
+
+/* ===========================START FOOTER=========================== */
+
+footer{
+    text-align: center;
+}
+
+footer h5 {
+    font-weight: 700;
+}
+
+footer p {
+    font-weight: 300;
+}
+
+.socialMedia i {
+    margin: 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.fa-square-facebook {
+    color: blue;
+}
+
+.fa-square-twitter{
+    color: #38A4E7;
+}
+
+.fa-square-instagram{
+    background-image: white;
+    color: rgb(221, 40, 40);
+}
+.fa-linkedin {
+    color: #0077B5;
+}
+
+/* ===========================MEDIA QUERY FOR TABLETS=========================== */
+
+@media screen and (max-width:1020px) {
+
+    /* .nav-links {
+        display: none;
+    } */
+
+    .navBar i {
+        display: inline;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .container h1 {
+        font-size: 35px;
+    }
+
+    .container p {
+        font-size: 10px;
+    }
+
+    .AboutUs-container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+
+
+    .nav-links {
+        position: absolute;
+        background: #f61403;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        z-index: 2;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        transition: 0.5s;
+    }
+
+    .nav-links a{
+        margin-left: 30%;
+        transition: 0.5s;
+    }
+
+    .nav-links a:hover{
+        margin-left: 30px;
+    }
+
+    .nav-links a::after {
+        content: "";
+        width: 200;
+        height: 0px;
+        background: blue;
+        transition: all 0.3s ease;
+        margin-top: 0.5rem;
+    }
+
+    .navBar{
+        padding: 1rem 2rem;
+    }
+}
