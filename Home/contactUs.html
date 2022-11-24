@@ -10,6 +10,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4ecdbc0e1d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4ecdbc0e1d.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,11 +23,11 @@
             </div>
             <div class="nav-links">
                 <i class="fa-solid fa-xmark" id="close-btn"></i>
-                <a href="">HOME</a>
-                <a href="">ABOUT</a>
-                <a href="">COURSE</a>
-                <a href="">BLOG</a>
-                <a href="">CONTACT</a>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="courses.html">COURSE</a>
+                <a href="blog.html">BLOG</a>
+                <a href="contactUs.html">CONTACT</a>
             </div>
             <i class="fa-solid fa-bars"></i>
         </nav>
@@ -47,34 +48,34 @@
                 <i class="fa-solid fa-house-chimney"></i>
                 <div class="contactInfo-text">
                     <h5>XYZ Road, ABC Building</h5>
-                    <p>Sanchaung, Yangon</p>
+                    <p class="text-muted">Sanchaung, Yangon</p>
                 </div>
             </div>
 
             <div class="contactInfo">
-                <i class="fa-solid fa-house-chimney"></i>
+                <i class="fa-solid fa-phone"></i>
                 <div class="contactInfo-text">
                     <h5>+959 449353320</h5>
-                    <p>Monday to Saturaday, 10AM to 6PM</p>
+                    <p class="text-muted">Monday to Saturaday, 10AM to 6PM</p>
                 </div>
             </div>
 
             <div class="contactInfo">
-                <i class="fa-solid fa-house-chimney"></i>
+                <i class="fa-solid fa-envelope"></i>
                 <div class="contactInfo-text">
                     <h5>heinhtikezaw2021hh@gmail.com</h5>
-                    <p>Email us your query</p>
+                    <p class="text-muted">Email us your query</p>
                 </div>
             </div>
         </div>
 
-        <div class="contactUs-form">
-            <input type="text" placeholder="Enter your name">
-            <input type="email" placeholder="Enter your email address">
-            <input type="text" placeholder="Enter your subject">
-            <textarea rows="10" placeholder="Message"></textarea>
-            <button type="submit" class="red-btn btn">Send Message</button>
-        </div>
+        <form class="contactUs-form" action="form-handler.php" method="post">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <input type="text" name="subject" placeholder="Enter your subject" required>
+            <textarea rows="8" name="message" placeholder="Message" required></textarea>
+            <button type="submit" class="red-btn btn btn-outline-danger">Send Message</button>
+        </form>
 
     </section>
 

@@ -471,6 +471,60 @@ footer p {
     margin: auto;
 }
 
+.contactUs {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.contactUs .contactInfos {
+    width: 50%;
+}
+
+.contactUs .contactInfos .contactInfo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contactUs .contactInfos .contactInfo i {
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+
+ 
+.contactUs-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contactUs-form input , .contactUs-form textarea {
+    outline: none;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.contactUs-form .red-btn {
+    color: rgb(216, 81, 95);
+    border-radius: 0;
+    transition: 0.5s;
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+.contactUs-form .btn:hover {
+    border: none;
+    background: #ff564a;
+    color: white;
+}
+
 /* ===========================MEDIA QUERY FOR TABLETS=========================== */
 
 @media screen and (max-width:1020px) {
@@ -577,5 +631,13 @@ footer p {
         width: 100%;
     }
 
+    .contactUs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactUs-form , .contactUs .contactInfos {
+        width: 100%;
+    }
 
 }
